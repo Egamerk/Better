@@ -2,7 +2,7 @@ if - true
 then
     
 local args = {
-    [1] = "I rape children",
+    [1] = "f",
     [2] = "All"
 }
 
