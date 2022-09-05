@@ -1,6 +1,6 @@
 if - true 
 then
-    
+    wait()
 local args = {
     [1] = "f",
     [2] = "All"
