@@ -18,11 +18,15 @@ local ExampleToggle = Groupbox1:CreateToggle("Example toggle", function(state)
    print(state)
 end)
 
-local ExampleToggle2 = Groupbox1:CreateToggle("Example keybind", function(state)
-   print(state)
+local ExampleToggle2 = Groupbox1:CreateToggle("Auto attack(Use while in the mini game)", function(state)
+local args = {
+    [1] = true
+}
+
+workspace.BattleManager.Success:FireServer(unpack(args))
 end)
 
-local ExampleButton = Groupbox1:CreateButton("Auto attack", function()
+local ExampleButton = Groupbox1:CreateButton("Example Button", function()
     print("Pressed")
 end)
 
