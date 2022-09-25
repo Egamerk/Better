@@ -5,6 +5,28 @@ local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
 LegitMain:AddDivider("Main");
+LegitMain:AddButton({text = "Teleport", callback = function()
+    local teleport_table = {
+    location1 = Vector3.new(2801.38134765625, 287.7499084472656, 55.64720153808594)
+}
+
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(1,Enum.EasingStyle.Linear)
+
+local lp = game.Players.LocalPlayer
+
+function bypass_teleport(v)
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(v)
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+
+    end
+end
+
+bypass_teleport(teleport_table.location1)
+end});
 LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
 LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
 LegitMain:AddSlider{text = "Smoothing Factor", flag = "Smoothing", min = 0, max = 30, value = 3, suffix = "%"}
