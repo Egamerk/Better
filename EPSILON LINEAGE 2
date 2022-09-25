@@ -27,7 +27,7 @@ end
 
 bypass_teleport(teleport_table.location1)
 end});
-LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
+LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled" }
 LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
 LegitMain:AddSlider{text = "Smoothing Factor", flag = "Smoothing", min = 0, max = 30, value = 3, suffix = "%"}
 LegitMain:AddList({text = "Hit Box", flag = "AimbotHitbox", value = "Head", values = {"Head", "Torso"}});
