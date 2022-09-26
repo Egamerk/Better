@@ -1,10 +1,11 @@
-loadstring(game:HttpGet('https://garfieldscripts.xyz/ui-libs/janlib.lua'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Egamerk/Better/main/Jan", true))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Legit"); 
 local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
 LegitMain:AddDivider("Main");
+LegitMain:AddToggle{text = "Speed", flag = "TriggerEnabled"}:AddBind({flag = "Aim Assist", key = "None"});
 LegitMain:AddButton({text = "Teleport", callback = function()
     local teleport_table = {
     location1 = Vector3.new(2801.38134765625, 287.7499084472656, 55.64720153808594)
